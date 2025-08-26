@@ -4,12 +4,12 @@ class Rectangulo {
         this.alto = alto
     }
 
-    area(){
+    calcularArea(){
         const area = this.ancho * this.alto
         console.log("El area es:" + area)
     }
 
-    perimetro(){
+    calcularPerimetro(){
         const perimetro = this.ancho + this.ancho + this.alto + this.alto
         console.log("El perimetro es:" + perimetro)
     }
@@ -17,7 +17,7 @@ class Rectangulo {
         return this.ancho === this.alto
     }
 }
-const miRectangulo = new Rectangulo(5, 5)
+const miRectangulo = new Rectangulo(2, 5)
 console.log(miRectangulo.esCuadrado())
-miRectangulo.area()
-miRectangulo.perimetro()
+miRectangulo.calcularArea()
+miRectangulo.calcularPerimetro()

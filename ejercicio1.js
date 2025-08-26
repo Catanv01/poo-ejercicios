@@ -5,22 +5,20 @@ class Coche {
         this.año = año
     }
 
-    informacion(){
+    mostrarInfo(){
         console.log(`El carro es ${this.marca} ${this.modelo} ${this.año} `)
     }
-    antiguedad(){
-    if (this.año < 2000) {
-        console.log("Es un coche antiguo")
-    } 
+    esAntiguo(){
+        return this.año < 2000
     }
-    lujo(){
+    esDeLujo(){
         const cocheLujo = ["Mercedes", "BMW", "Audi"]
         return cocheLujo.includes(this.marca)
     }
 
 }
-const miCoche = new Coche("Kia", "picanto", 2006)
-miCoche.informacion()
-miCoche.antiguedad()
-console.log(miCoche.lujo())
+const miCoche = new Coche("BMW", "picanto", 1999)
+miCoche.mostrarInfo()
+console.log(miCoche.esAntiguo())
+console.log(miCoche.esDeLujo())
 
